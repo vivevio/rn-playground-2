@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, Dimensions} from 'react-native';
+import {
+  StyleSheet,
+  View,
+  StatusBar
+} from 'react-native';
 import Header from './src/components/Header';
 import Bar from './src/components/Bar';
 import Form from './src/components/Form';
@@ -19,6 +23,9 @@ export default class App extends Component {
     return (
       <KeyboardAwareScrollView style={ styles.parent} innerRef={ref => {this.scroll = ref}}>
         <View style={ styles.container}>
+          <StatusBar
+            translucent={true}
+          />
           <Header/>
           <Bar />
           <Form />
